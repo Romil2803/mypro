@@ -1,198 +1,156 @@
-//  fullname="Romil";
-//  age=19;
-//  x=null
-//  y=undefined;
-//  console.log(age);
-// var age = 19;
-// var age = 20;
-// var age = 21;
-// console.log(age);
-// let fullname = "Romil";
-// // let fullname = "Raj";
-//  fullname = "Raj";
-//  fullname = "Rohit";
-// console.log(fullname);
-// const x = 3.14;
-// // x = 3.15;
-// console.log(x);
-// {
-//     let y = 10;
-//     // y = 20;
-//     // let y = 100;
-//     console.log(y);
+
+/*****************prectice 1**************/
+// let marck= prompt("Enter your marck (0-100):");
+// let grade;
+// if(marck >= 90 && marck <= 100){
+//     grade="A";
 // }
-// {
-//     let y = 20;
-//     console.log(y);
+// else if ( marck >= 70 && marck <= 89){
+//     grade="B";
 // }
-
-// const student = {
-//     fullname: "Romil",
-//     age: 19,
-//     marcks: 90,
-//     isPass: true
+// else if (marck >= 60 && marck <= 69){
+//     grade="C";
 // }
-
-// student["age"] = student["age"] + 1;
-
-// // console.log(student);
-// // console.log(student["age"]);
-// console.log(student.age);
-
-//Arithmetic Operators
-
-// let x = 10;
-// let y = 20;
-// console.log("x + y =", x + y);
-// console.log("x - y =", x - y);
-// console.log("x * y =", x * y);
-// console.log("x / y =", x / y);
-// console.log("x % y =", x % y);
-// console.log("x ** y =", x ** y);
-
-//unary operator
-
-// console.log("x++ =", x++);
-// console.log("x =", x);
-
-// console.log("x-- =", x--);
-// console.log("x =", x);
-
-// assignment operator
-
-// a = 10;
-// b = 20;
-// // a += b;
-// // a -= b;
-// // a *= b;
-// // a /= b;
-// // a %= b;
-// // a **= b;
-// console.log("a =",a);
-
-//comparison operator
-
-// a=10;   
-// b="20";
-
-// console.log("a == b", a == b);
-// console.log("a != b", a != b);
-// console.log("a === b", a === b);
-// console.log("a !== b", a !== b);  
-
-// logical operator
-
-// a = 30;    
-// b = 20;
-
-// console.log("a > b && a === 10", a > b && a === 30);
-// console.log("a > b && a === 10", a < b && a === 20);
-// console.log("a < b && a === 10", a < b || a === 30);
-// console.log("a < b && a === 10", a < b || a === 20);
-// console.log("!(a < b)", !(a < b));
-// console.log("!(a > b)", !(a > b));
-
-// conditional statement
-// if
-// let age = 16;
-
-// if (age >= 18) {
-//     console.log("You are eligible for vote");
-// }
-
-// if (age < 18) {
-//     console.log("You are not eligible for vote");
-// }
-
-// let mode="dark";
-// let color;
-
-// if(mode == "dark"){
-//     color="black";
-// }
-// if (mode == "light"){
-//     color="white";
-// }
-// console.log(color);
-
-//if else
-
-// let mode="light";
-// let color;
-
-// if(mode == "dark"){
-//     color="black";
+// else if ( marck >= 50 && marck <= 59){
+//     grade="D"
 // }
 // else{
-//     color="white";
+//     grade="f"
 // }
-// console.log(color);
+// console.log(grade);
 
-// let a = 18;
 
-// if (a % 2 == 0) {
-//     console.log(a,"is Even");
-// }
-// else {
-//     console.log(a,"is Odd");
-// }
+/*****************prectice 2**************/
 
-// let a = 10;
-// let b = 20;
 
-// if (a > b) {
-//     console.log("a is max");
-// }
-// else {
-//     console.log("b is max");
-// }
-
-//else if
-// let a = 10;
-// let b = 20;
-// let c = 30;
-
-// if (a > b && a > c){
-//     console.log("a is max");
-// }
-// else if (b > a && b > c){
-//     console.log("b is max");
+// let number = prompt("Enter Number :");
+// if(number % 5 === 0){
+//     console.log("Number is multiple of 5");
 // }
 // else{
-//     console.log("c is max");
+//     console.log("Number is not multiple of 5");
 // }
 
-//ternary operator
-// let age = 25;
+/*****************for loop**************/
 
-// age >= 18 ? console.log("adult") : console.log("not adult");
-
-// alert("Hello World");
-// let name= prompt("Enter value");
-// if(name % 5 == 0){
-//     console.log("is Multiple of 5");
-// }
-// else{
-//     console.log("is Not Multiple of 5");
+// for(let i = 1; i <= 5; i++){
+//     console.log(i);
 // }
 
-let score = prompt("Enter your score");
+/*****************while loop**************/
 
-if (score >= 95) {
-    console.log("A+");
-}
-else if (score <= 94 && score >= 90) {
-    console.log("A");
-}
-else if (score <= 89 && score >= 70){
-    console.log("B");
-}
-else if (score <= 69 && score >= 60){
-    console.log("C");
-}
-else if (score <= 59 && score >= 50){
-    console.log("D");
-}
-else{
-    console.log("Fail");
-}
+// let i=1;
+// while(i <= 10){
+//     console.log(i)
+//     i++;
+// }
+
+/*****************do while loop**************/
+
+// let i=1;
+// do{
+//     console.log(i)
+//     i++;
+// }
+// while(i <= 10);
+
+
+/*****************for of loop**************/
+
+// let str="Hello";
+// let size = 0;
+// for(let i of str){
+//     console.log("i =",i)
+//     size++;
+// }
+// console.log("string size =",size)
+
+
+/*****************for in loop**************/
+
+
+// let student ={
+//     name : "Romil",
+//     age : 19,
+//     cgp : 7.5,
+//     isPass : true
+// }
+// for(let i in student){
+//     console.log("key =",i,"value",student[i]);
+// }
+
+/*****************prectice 3**************/
+
+// for(let i = 1; i <= 100;i++){
+//     //even Number
+//     if(i % 2 === 0){
+//         console.log("even Number",i);
+//     }
+// }
+// for(let i = 1; i <= 100;i++){
+//     //odd Number
+//     if(i % 2 !== 0){
+//         console.log("odd Number",i);
+//     }
+// }
+
+/*****************prectice 4**************/
+
+// let gameNumber=25;
+
+// let userNumber= prompt("guess the Number");
+
+
+// while(userNumber != gameNumber){
+//     userNumber=prompt("you guess the Wrong Number, guess again");
+// }
+// console.log("you entered the right Number :");
+
+
+// let str="romil"; //position --> index or indices
+// console.log(str[4]);
+
+
+/*****************Template Literals in JS**************/
+
+// const obj={
+//     itme:"pan",
+//     Price:25
+// }
+// console.log("the cost of",obj.itme,"is",obj.Price,"rupees");
+
+// let output = `the cost of ${obj.itme} is ${obj.Price} rupees`;
+// console.log(output);
+
+
+/*****************Escape Characters **************/
+
+// let str1="Romil\nSnagani";
+// let str2="Romil\tSnagani";
+// console.log(str1);
+// console.log(str2);
+// console.log(str2.length);
+
+/*****************String Methods in JS**************/
+
+// let str="romil";
+// let str1="Sangani";
+// console.log(str.toUpperCase());
+// console.log(str.toLocaleLowerCase());
+// console.log(str.trim());//for trim whitespace
+// console.log(str.slice(0,3)); // returns part of string
+// console.log(str.concat(str1));// marge string
+// let res=str + str1; //marge string
+// let res1="i am"+ str + str1;
+// console.log(res);
+// console.log(res1);
+// console.log(str.replace("r","f")); //replace
+// console.log(str.charAt(0)); //to find character 
+
+
+/*****************prectice 5**************/
+
+let fullname=prompt("Enter your Full Name");
+let username="@"+fullname;
+console.log(username);
+// console.log("@",username + username.length);
