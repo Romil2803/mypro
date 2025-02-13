@@ -1,156 +1,205 @@
+/****************Practice*******************/
 
-/*****************prectice 1**************/
-// let marck= prompt("Enter your marck (0-100):");
-// let grade;
-// if(marck >= 90 && marck <= 100){
-//     grade="A";
-// }
-// else if ( marck >= 70 && marck <= 89){
-//     grade="B";
-// }
-// else if (marck >= 60 && marck <= 69){
-//     grade="C";
-// }
-// else if ( marck >= 50 && marck <= 59){
-//     grade="D"
-// }
-// else{
-//     grade="f"
-// }
-// console.log(grade);
+// let fullName= prompt("Enter Your full Name");
+// let usearName="@"+fullName+fullName.length;
+// console.log(usearName);
 
+/****************Array*******************/
 
-/*****************prectice 2**************/
+// let hero=["ironman","thor","batman","spiderman"];
+// console.log(hero);
+// console.log(hero.length);
+// console.log(hero[2]);//Array Indices(index)
+// hero[0]="captain America";//Array index value change
+// console.log(hero[0]);
 
-
-// let number = prompt("Enter Number :");
-// if(number % 5 === 0){
-//     console.log("Number is multiple of 5");
-// }
-// else{
-//     console.log("Number is not multiple of 5");
+//for loop
+// let hero=["ironman","thor","batman","spiderman"];
+// for(let idx=0; idx < hero.length; idx++){
+//     console.log(hero[idx]);
 // }
 
-/*****************for loop**************/
-
-// for(let i = 1; i <= 5; i++){
-//     console.log(i);
+//for of loop
+// let cities=["surat","amdavad","gandhinagar","junaghdh","Delhi","mumbai"];
+// for(let allName of cities){
+//     console.log(allName.toUpperCase());
 // }
 
-/*****************while loop**************/
+/****************Practice*******************/
+// let marks=[85,97,44,37,76,60];
+// let sum=0;
+// for(let i of marks){
+//     sum+=i;
+// }
+// console.log(sum);
+// let agv=sum/marks.length;
+// console.log(`agv maeks is =${agv}`);
 
-// let i=1;
-// while(i <= 10){
-//     console.log(i)
-//     i++;
+
+
+
+
+
+
+
+
+
+//Qs. For a given array with marks of students -> [85, 97, 44, 37, 76, 60]Find the average marks of the entire class.
+
+// let marks=[75,78,25,65,47,86];
+// let sum=0;
+//for loop
+// for(let i=0;i<marks.length;i++){
+//     sum+=marks[i];
+// }
+// console.log(sum);
+// let agv=sum/marks.length;
+// console.log(agv);
+
+//for of loop
+// for(let i of marks){
+//     sum+=i;//to find sum
+// }
+// console.log(sum);
+// let agv=sum/marks.length;//to find agv
+// console.log(`age mark is = ${agv}`)
+
+//Qs. For a given array with prices of 5 items -> [250, 645, 300, 900, 50]All items have an offer of 10% OFF on them. Change the array to store final price after applying offer.
+
+// let price=[250,645,300,900,50];
+// let dis=0;
+// let disprice;
+
+//for of loop
+
+// for(let i of price){
+//     dis=i/10;
+//     disprice=i-dis;
+//     console.log(`final price after applying offer ${disprice}`);
 // }
 
-/*****************do while loop**************/
+//for loop
 
-// let i=1;
-// do{
-//     console.log(i)
-//     i++;
-// }
-// while(i <= 10);
-
-
-/*****************for of loop**************/
-
-// let str="Hello";
-// let size = 0;
-// for(let i of str){
-//     console.log("i =",i)
-//     size++;
-// }
-// console.log("string size =",size)
-
-
-/*****************for in loop**************/
-
-
-// let student ={
-//     name : "Romil",
-//     age : 19,
-//     cgp : 7.5,
-//     isPass : true
-// }
-// for(let i in student){
-//     console.log("key =",i,"value",student[i]);
+// for(let i=0;i<price.length;i++){
+//     dis=price[i]/10;
+//     price[i]-=dis;
+//     console.log(`final price after applying offer ${price[i]}`);
 // }
 
-/*****************prectice 3**************/
 
-// for(let i = 1; i <= 100;i++){
-//     //even Number
-//     if(i % 2 === 0){
-//         console.log("even Number",i);
+
+/********************Array Methods*****************/
+
+//Push( ) : add to end
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// marvalHero.push("hulk");
+// console.log(marvalHero);
+
+//Pop( ) : delete from end & return
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// let val=marvalHero.pop();
+// console.log(marvalHero);
+// console.log(val);
+
+//toString( ) : converts array to string
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// console.log(marvalHero);
+// console.log(marvalHero.toString());
+
+
+//Concat( ) : joins multiple arrays & returns result
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// let dcHero=["superman","batman","wonderwoman"]
+// console.log(marvalHero.concat(dcHero));
+
+//Unshift( ) : add to start
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// marvalHero.unshift("hulk");
+// console.log(marvalHero);
+
+//shift( ) : delete from start & return
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// let val=marvalHero.shift();
+// console.log(marvalHero);
+// console.log(val);
+
+
+//Slice( ) : returns a piece of the array
+
+// let marvalHero=["ironman","spiderman","antman","thor"]
+// console.log(marvalHero.slice(0,3));
+
+
+//Splice( ) : change original array (add, remove, replace)
+
+// let marvalHero=[1,2,3,4,5,6,7]
+// marvalHero.splice(2,2,101,102);
+// console.log(marvalHero);
+
+
+///Qs. Create an array to store companies -> “Bloomberg”,“Microsoft”,“Uber”,“Google",“IBM”,“Netflix”
+// a. Remove the first company from the array
+// b. Remove Uber & Add Ola in its place
+// c. Add Amazon at the end
+
+// let company=["Bloomberg","Microsoft","Uber","Google","IBM","Netfilx"];
+//     company.shift();
+//     company.splice(2,2,"ola");
+//     company.push("Amazon");
+//     console.log(company); 
+
+// function myfunction(mag){//parameter -->input
+//     // console.log("hello");
+//     // console.log("i am Romil");
+//     console.log(mag);
+// }
+// myfunction("Romil");//argument
+
+// function sum(x,y){//local Variables is block 
+//     s=x+y;
+//     return s;
+// }
+// let val=sum(3,4);
+// console.log(val);
+
+//arrow function
+// const arrowsum=(a,b)=>{
+//     console.log(a+b);
+// }
+// arrowsum(3,5);
+
+// const arrowmul=(a,b)=>{
+//     // console.log(a*b);
+//     return a * b;
+// }
+// let val=arrowmul(3,4);
+// console.log(val);
+
+
+// function countvowels(str){
+//     let val;
+//     for(let i of str){
+//         if(str == "a" || str == "e" || str == "i"|| str == "o"|| str == "u"){
+//             val++;
+//         }
+//         return val;
 //     }
 // }
-// for(let i = 1; i <= 100;i++){
-//     //odd Number
-//     if(i % 2 !== 0){
-//         console.log("odd Number",i);
-//     }
-// }
+// countvowels("hello")
 
-/*****************prectice 4**************/
-
-// let gameNumber=25;
-
-// let userNumber= prompt("guess the Number");
-
-
-// while(userNumber != gameNumber){
-//     userNumber=prompt("you guess the Wrong Number, guess again");
-// }
-// console.log("you entered the right Number :");
-
-
-// let str="romil"; //position --> index or indices
-// console.log(str[4]);
-
-
-/*****************Template Literals in JS**************/
-
-// const obj={
-//     itme:"pan",
-//     Price:25
-// }
-// console.log("the cost of",obj.itme,"is",obj.Price,"rupees");
-
-// let output = `the cost of ${obj.itme} is ${obj.Price} rupees`;
-// console.log(output);
-
-
-/*****************Escape Characters **************/
-
-// let str1="Romil\nSnagani";
-// let str2="Romil\tSnagani";
-// console.log(str1);
-// console.log(str2);
-// console.log(str2.length);
-
-/*****************String Methods in JS**************/
-
-// let str="romil";
-// let str1="Sangani";
-// console.log(str.toUpperCase());
-// console.log(str.toLocaleLowerCase());
-// console.log(str.trim());//for trim whitespace
-// console.log(str.slice(0,3)); // returns part of string
-// console.log(str.concat(str1));// marge string
-// let res=str + str1; //marge string
-// let res1="i am"+ str + str1;
-// console.log(res);
-// console.log(res1);
-// console.log(str.replace("r","f")); //replace
-// console.log(str.charAt(0)); //to find character 
-
-
-/*****************prectice 5**************/
-
-let fullname=prompt("Enter your Full Name");
-let username="@"+fullname;
-console.log(username);
-// console.log("@",username + username.length);
+function countvowels(str){
+    for(let i of str){
+        count=0;
+        if(i == "a" || i == "e" || i == "i"|| i == "o"|| i == "u"){
+            count++;
+        }
+    }
+}
+countvowels("hello")
+console.log(count);
