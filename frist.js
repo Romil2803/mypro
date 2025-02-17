@@ -1,122 +1,125 @@
-/************************Create a function using the “function” keyword that takes a String as an argument &returns the number of vowels in the string.***********************/
-
-
-// function countvowels(str){
-//     let count=0;
-//     for(let i of str){
-//         if(i === "a" || i === "e" || i === "i"|| i === "o"|| i === "u"){
-//             count++; 
-//         }
-//     }
-//     console.log(count);
-// }
-// countvowels("hello");
-
-/**************Qs. Create an arrow function to perform the same task***********/
-
-// const arrowvowels=(str)=>{
-//     let count=0;
-//     for(let i of str){
-//         if(i === "a" || i === "e" || i === "i" || i === "o" || i === "u"){
-//             count++;
-//         }
-//     }
-//     console.log(count);
-// }
-// arrowvowels("hello");
-
-// let arr=[1,2,3,4,5];
-// arr.forEach (function printval (val){
-//     console.log(val);
-// })
-
-// let str=["surat","delhi","pune"];
-// str.forEach((val,i,arr)=>{
-//     console.log(val.toUpperCase(),i,arr);
-// })
-
-
-/*Qs. For a given array of numbers, print the square of each value using the forEach loop*/
-
-//1 method 
-// let arr=[1,2,3,4,5];
-// arr.forEach((val)=>{
-//     console.log(val*val);
-// })
-//2 method
-// let square=(val)=>{
-//     console.log(val*val);
-// };
-// arr.forEach(square)
-
-/*********arr map square*********/
-// let arr=[54,68,47,98];
-// let sqe= arr.map((val)=>{
-//     // console.log(val);
-//     return val*val;
-// })
-// console.log(sqe);
-
-/*********arr filter even number*********/
-// let num=[1,2,3,4,5,6];
-
-// let evennum= num.filter((val)=>{
-//     return val%2===0;
-// })
-
-// console.log(evennum);
-
-
-/*********arr reduce retun sum*********/
-// let arr=[54,85,69,75,45];
-
-// let totel=arr.reduce((prev,cur)=>{
-//     return prev+cur;
-// })
-// console.log(totel);
-
-
-/*********arr reduce max num retun*********/
-
-
-// let arr=[85,75,98,65,42];
-
-// let maxnum= arr.reduce((prev,cur)=>{
-//     return prev > cur ? prev : cur;
-// })
-// console.log(maxnum);
-
-/***We are given array of marks of students. Filter our of the marks of students that scored 90+.***/
-// let marck=[85,78,98,96,45,78,92,97,75,65,52];
-// let topper=marck.filter((val)=>{
-//     return val >= 90;
-// })
-// console.log(topper);
-
-
-/*Qs. Take a number n as input from user. Create an array of numbers from 1 to n.
-    Use the reduce method to calculate sum of all numbers in the array.
-    Use the reduce method to calculate product of all numbers in the array.
-*/
-
-
-//  let n=prompt("Enter Number");
-//  let arr=[];
-//  for(i=1;i<=n;i++){
-//     arr[i-1]=i;
-//  }
-//  console.log(arr);
-//  let sum=arr.reduce((prev,cru)=>{
-//     return prev+cru;
-//  })
-//  console.log(`sum =${sum}`);
-
-//  let factorial= arr.reduce((prev,cru)=>{
-//     return prev*cru;
-//  })
-//  console.log(factorial);
-console.dir(document.body);
-console.log(document.body);
+// console.dir(document.body);
+// console.log(document.body);
 // document.body.style.backgroundColor="red";  
 // document.body.childNodes[1].innerText="abc";  
-document.getElementById("heading");
+// let heading= document.getElementById("heading");//id name
+// console.dir(heading);
+// let headings= document.getElementsByClassName("heading-class");//class name
+// console.dir(headings);
+// console.log(headings);
+
+// let tagName= document.getElementsByTagName("button");//tag name
+// console.dir(tagName);
+
+// let fristEle=document.querySelector("p");//1st element
+// console.dir(fristEle);
+
+// let allEle=document.querySelectorAll("p");//all element
+// console.dir(allEle);
+
+// console.dir(document.body.firstChild);
+
+// let fruits=document.querySelector("div");
+// console.dir(fruits);
+// console.dir(fruits.tagName);
+// console.dir(fruits.innerText);
+// console.dir(fruits.innerHTML);
+// console.dir(fruits.textContent);
+
+/*Qs. Create a H2 heading element with text - “Hello JavaScript”. Append “from Apna College
+students” to this text using JS.*/
+
+// let heading=document.querySelector("h2");
+// console.dir(heading.innerText);
+// heading.innerText=heading.innerText + "Romil";
+
+
+/*Qs. Create 3 divs with common class name - “box”. Access them & add some unique text to each
+of them.*/
+
+// let boxes=document.querySelectorAll(".box");
+// // console.log(boxes[0]);
+// let i=1;
+// for(div of boxes){
+//     console.log(div.innerText);
+//     div.innerText=`New Boxes ${i}`;
+//     i++;
+// }
+  
+// let div= document.querySelector("div");//to get the attribute value
+// console.log(div);
+
+// let id=div.getAttribute("id");//to get the attribute value
+// console.log(id);
+
+// let para=document.querySelector("p");//to set the attribute value
+// console.log(para.setAttribute("class","newpara"));
+
+// let myboxes=document.querySelector("#mybox");//node.style
+// myboxes.style.backgroundColor="red";
+// myboxes.style.fontSize="26px";
+// myboxes.innerText="hello";
+
+// let ele=document.createElement("button")//createElement
+// ele.innerText="Click me!";
+// myboxes.append(ele);//adds at the end of node (inside)
+// myboxes.prepend(ele);//adds at the start of node (inside)
+// myboxes.before(ele);//adds at the start of node (inside)
+// myboxes.after(ele); //adds after the node (outside)
+
+// let newheading= document.createElement("h1");
+// newheading.innerText="New heading";
+// document.querySelector("body").prepend(newheading);
+
+// let para=document.querySelector("p");
+// para.remove();
+
+
+/*Qs. Create a new button element. Give it a text “click me”, background color of red & text colorof white.*/
+
+// let newbtn=document.createElement("button");
+// newbtn.innerText="click me!";
+// newbtn.style.backgroundColor="red";
+// newbtn.style.Color="white";
+// let btnadd= document.querySelector("body").prepend(newbtn);
+
+
+/*Create a <p> tag in html, give it a class & some styling.Now create a new class in CSS and try to append this class to the <p> element.*/
+
+// let content=document.querySelector(".content");
+// content.classList.add("contentadd");
+
+
+// let btn1=document.querySelector("#btn1");
+// btn1.onclick= () => {
+//     console.log("button was clicked");
+// }
+
+// let box1=document.querySelector("#box1");
+// box1.onmouseover = () => {
+//     console.log("you are inside box");
+// }
+
+// let btn2=document.querySelector("#btn2");
+// btn2.onclick=(e)=>{
+//     console.log(e);
+//     console.log(e.type);
+//     console.log(e.target);
+//     console.log(e.clientX,e.clientY);
+// }
+
+let btn3=document.querySelector("#btn3");
+btn3.addEventListener("click" ,()=>{
+    console.log("btn3 was clicked - handler1");
+});
+btn3.addEventListener("click" ,()=>{
+    console.log("btn3 was clicked - handler2");
+});
+const handler3=()=>{
+    console.log("btn3 was clicked - handler3");
+};
+btn3.addEventListener("click",handler3);
+btn3.addEventListener("click" ,()=>{
+    console.log("btn3 was clicked - handler4");
+})
+btn3.removeEventListener("click",handler3);
