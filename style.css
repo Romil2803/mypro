@@ -1,0 +1,44 @@
+#heading{
+    background-color: crimson;
+    color: darkgoldenrod;
+}
+.heading-class{
+    background-color: blueviolet;
+    color: firebrick;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 5px;
+    background-color: firebrick;
+    text-align: center;
+}
+#mybox{
+    height:250px;
+    width: 100px;
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+}
+
+.content{
+    color: red;
+}
+.contentadd{
+    background-color: green;
+}
+
+.event-box{
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: darksalmon;
+    color: white;
+}
