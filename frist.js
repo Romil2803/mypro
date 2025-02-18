@@ -1,125 +1,129 @@
-// console.dir(document.body);
-// console.log(document.body);
-// document.body.style.backgroundColor="red";  
-// document.body.childNodes[1].innerText="abc";  
-// let heading= document.getElementById("heading");//id name
-// console.dir(heading);
-// let headings= document.getElementsByClassName("heading-class");//class name
-// console.dir(headings);
-// console.log(headings);
+// // let mode=document.querySelector("#modbtn");
+// // let currMode="light";
+// // mode.addEventListener("click",()=>{
+// //     if(currMode == "light"){
+// //         currMode="dark";
+// //         document.querySelector("body").style.backgroundColor="black";
+// //     }else{
+// //         currMode="light";
+// //         document.querySelector("body").style.backgroundColor="White";
+// //     }
+// //     console.log(currMode);
+// // })
 
-// let tagName= document.getElementsByTagName("button");//tag name
-// console.dir(tagName);
+// //by add and remove class
+// let btnMode=document.querySelector("#modbtn");
+// let currMode="light";
+// let body=document.querySelector("body");
+// btnMode.addEventListener("click",()=>{
+//     if(currMode == "light"){
+//         currMode="dark";
+//         body.classList.add("dark");
+//         body.classList.remove("light");
+//     }else{
+//         currMode="light";
+//         body.classList.add("light");
+//         body.classList.remove("dark");
+//     }
+//     console.log(currMode);
+// })
+let userScore=0;
+let compScore=0;
 
-// let fristEle=document.querySelector("p");//1st element
-// console.dir(fristEle);
+const choices=document.querySelectorAll(".choice");
+const msg=document.querySelector("#msg");
 
-// let allEle=document.querySelectorAll("p");//all element
-// console.dir(allEle);
+const userScorePara=document.querySelector("#user-score");
+const compScorePara=document.querySelector("#comp-score");
 
-// console.dir(document.body.firstChild);
-
-// let fruits=document.querySelector("div");
-// console.dir(fruits);
-// console.dir(fruits.tagName);
-// console.dir(fruits.innerText);
-// console.dir(fruits.innerHTML);
-// console.dir(fruits.textContent);
-
-/*Qs. Create a H2 heading element with text - “Hello JavaScript”. Append “from Apna College
-students” to this text using JS.*/
-
-// let heading=document.querySelector("h2");
-// console.dir(heading.innerText);
-// heading.innerText=heading.innerText + "Romil";
-
-
-/*Qs. Create 3 divs with common class name - “box”. Access them & add some unique text to each
-of them.*/
-
-// let boxes=document.querySelectorAll(".box");
-// // console.log(boxes[0]);
-// let i=1;
-// for(div of boxes){
-//     console.log(div.innerText);
-//     div.innerText=`New Boxes ${i}`;
-//     i++;
-// }
-  
-// let div= document.querySelector("div");//to get the attribute value
-// console.log(div);
-
-// let id=div.getAttribute("id");//to get the attribute value
-// console.log(id);
-
-// let para=document.querySelector("p");//to set the attribute value
-// console.log(para.setAttribute("class","newpara"));
-
-// let myboxes=document.querySelector("#mybox");//node.style
-// myboxes.style.backgroundColor="red";
-// myboxes.style.fontSize="26px";
-// myboxes.innerText="hello";
-
-// let ele=document.createElement("button")//createElement
-// ele.innerText="Click me!";
-// myboxes.append(ele);//adds at the end of node (inside)
-// myboxes.prepend(ele);//adds at the start of node (inside)
-// myboxes.before(ele);//adds at the start of node (inside)
-// myboxes.after(ele); //adds after the node (outside)
-
-// let newheading= document.createElement("h1");
-// newheading.innerText="New heading";
-// document.querySelector("body").prepend(newheading);
-
-// let para=document.querySelector("p");
-// para.remove();
-
-
-/*Qs. Create a new button element. Give it a text “click me”, background color of red & text colorof white.*/
-
-// let newbtn=document.createElement("button");
-// newbtn.innerText="click me!";
-// newbtn.style.backgroundColor="red";
-// newbtn.style.Color="white";
-// let btnadd= document.querySelector("body").prepend(newbtn);
-
-
-/*Create a <p> tag in html, give it a class & some styling.Now create a new class in CSS and try to append this class to the <p> element.*/
-
-// let content=document.querySelector(".content");
-// content.classList.add("contentadd");
-
-
-// let btn1=document.querySelector("#btn1");
-// btn1.onclick= () => {
-//     console.log("button was clicked");
-// }
-
-// let box1=document.querySelector("#box1");
-// box1.onmouseover = () => {
-//     console.log("you are inside box");
-// }
-
-// let btn2=document.querySelector("#btn2");
-// btn2.onclick=(e)=>{
-//     console.log(e);
-//     console.log(e.type);
-//     console.log(e.target);
-//     console.log(e.clientX,e.clientY);
-// }
-
-let btn3=document.querySelector("#btn3");
-btn3.addEventListener("click" ,()=>{
-    console.log("btn3 was clicked - handler1");
-});
-btn3.addEventListener("click" ,()=>{
-    console.log("btn3 was clicked - handler2");
-});
-const handler3=()=>{
-    console.log("btn3 was clicked - handler3");
+const gencompChoice=()=>{
+    const options=["rock","paper","scissors"];
+    const randindx=Math.floor(Math.random()*3);
+    return options[randindx];
 };
-btn3.addEventListener("click",handler3);
-btn3.addEventListener("click" ,()=>{
-    console.log("btn3 was clicked - handler4");
-})
-btn3.removeEventListener("click",handler3);
+
+const drawGame =()=>{
+    console.log("game was draw");
+    msg.innerText="Game was a draw. Play again";
+    msg.style.backgroundColor="#081b31";
+};
+
+const showWinner=(userWin,userChoice,compchoice)=>{
+    if(userWin){
+        userScore++;
+        userScorePara.innerText=userScore;
+        console.log("you win");
+        msg.innerText=`You Win! your ${userChoice} beat ${compchoice}`;
+        msg.style.backgroundColor="green";
+    }else{
+        compScore++;
+        compScorePara.innerText=compScore;
+        console.log("you lose");
+        msg.innerText=`You lose ${compchoice} beat your ${userChoice}`;
+        msg.style.backgroundColor="red";
+    }
+}
+
+const playGame=(userChoice)=>{
+    console.log("user choice =",userChoice);
+    const compchoice=gencompChoice();
+    console.log("comp choice =",compchoice);
+
+    if(userChoice === compchoice){
+        drawGame();
+    }else{
+        let userWin=true;
+        if(userChoice === "rock"){
+            //scissors,paper
+            userWin=compchoice === "paper"?false:true;
+        }else if(userChoice === "paper"){
+            //scissors,rock
+            userWin=compchoice === "scissors"?false:true;
+        }else{
+            //rock,paper
+            userWin=compchoice ==="rock"?false:true;
+        }
+        showWinner(userWin,userChoice,compchoice);
+    }
+};
+choices.forEach(choice => {
+    choice.addEventListener("click", () => {
+        const userChoice = choice.getAttribute("id");
+        // console.log("choice was clickd",userChoice);
+        playGame(userChoice);
+    });
+});
+
+
+// let inputvalue = document.querySelector("#one");
+// let daypara = document.querySelector("#two");
+
+// inputvalue.addEventListener("input", () => {
+//     daypara.value = inputvalue.value;
+// });
+
+// let src=document.querySelector("#one");
+// let dst=document.querySelector("#two");
+//   window.onload=()=>{
+//       src.addEventListener("input",()=>{
+//         dst.value=src.value;
+//       });
+//   };
+
+const student ={
+  fullName:"Romil Sangani",
+  marks:94.4,
+  printmarks:()=>{
+    console.log("mark =",this.marks);
+  },
+};
+
+const employee={
+  clltex(){
+    console.log("tex is 10%");
+  },
+}
+const karan={
+  salary:50000,
+}
+karan.__proto__=employee;
