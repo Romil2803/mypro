@@ -1,44 +1,74 @@
-#heading{
-    background-color: crimson;
-    color: darkgoldenrod;
+/* .dark{
+    background-color: black;
+    color: white;
 }
-.heading-class{
-    background-color: blueviolet;
-    color: firebrick;
-}
-
-.box{
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-    margin: 5px;
-    background-color: firebrick;
+.light{
+    background-color: white;
+    color: black;
+} */
+ body{
+   background-image: url(./img/backimg.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+ *{
+    margin: 0;
+    padding: 0;
     text-align: center;
-}
-#mybox{
-    height:250px;
-    width: 100px;
-    background-color: rebeccapurple;
+ }
+ h1{
+    background-color: #081b31;
     color: white;
-    text-align: center;
-}
+    height: 5rem;
+    line-height: 5rem;
+ }
+ .choice{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+ }
 
-.content{
-    color: red;
-}
-.contentadd{
-    background-color: green;
-}
-
-.event-box{
-    width: 100px;
-    height: 100px;
-    background-color: darkred;
+ .choice img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+ }
+ .choice:hover{
+    cursor: pointer;
+    background-color: #081b31;
+ }
+ .choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 70px;
+ }
+ .score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    font-size: 30px;
+    margin-top: 50px;
+ }
+ #user-score,#comp-score{
+    font-size: 50px;
+ }
+ .msg-container{
+    margin-top: 70px;
+ }
+ #msg{
+    background-color: #081b31;
     color: white;
-}
-#box1{
-    width: 100px;
-    height: 100px;
-    background-color: darksalmon;
-    color: white;
-}
+    font-size: 30px;
+    display: inline;
+    padding: 10px;
+    border-radius: 10px;
+ }
