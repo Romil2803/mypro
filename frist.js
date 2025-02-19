@@ -1,129 +1,263 @@
-// // let mode=document.querySelector("#modbtn");
-// // let currMode="light";
-// // mode.addEventListener("click",()=>{
-// //     if(currMode == "light"){
-// //         currMode="dark";
-// //         document.querySelector("body").style.backgroundColor="black";
-// //     }else{
-// //         currMode="light";
-// //         document.querySelector("body").style.backgroundColor="White";
-// //     }
-// //     console.log(currMode);
-// // })
+// const student={
+//     fullName:"sanganiRomil",
+//     marks:89,
+//     printmarks:function(){
+//         console.log("mark =",this.marks)
+//     },
+// };
+// console.log(student.printmarks());
 
-// //by add and remove class
-// let btnMode=document.querySelector("#modbtn");
-// let currMode="light";
-// let body=document.querySelector("body");
-// btnMode.addEventListener("click",()=>{
-//     if(currMode == "light"){
-//         currMode="dark";
-//         body.classList.add("dark");
-//         body.classList.remove("light");
-//     }else{
-//         currMode="light";
-//         body.classList.add("light");
-//         body.classList.remove("dark");
+// const emp={
+//     calTex(){
+//         console.log("Tex is 10%");
+//     },
+// }
+// const arjun={
+//     salary:50000,
+// }
+// arjun.__proto__=emp;
+// console.log(arjun);
+// console.log(arjun.calTex());
+
+                                    //class and Constructor( ) method
+
+// class toyotaCar{
+//     constructor(brand,mileage){
+//         console.log("creating new object");
+//         this.brand=brand;
+//         this.mileage=mileage;
 //     }
-//     console.log(currMode);
-// })
-let userScore=0;
-let compScore=0;
+//     start(){
+//         console.log("start");
+//     }
+//     stop(){
+//         console.log("stop");
+//     }
+//     setBrand(brand){
+//         this.brand/*class object property*/=brand/*function argument or parameater*/;
+//     }
+// }
+// let fortuner= new toyotaCar("fortuner",10);
+// console.log(fortuner);
+// console.log(fortuner.start());
+// fortuner.setBrand("fortuner");
 
-const choices=document.querySelectorAll(".choice");
-const msg=document.querySelector("#msg");
+// let lexus= new toyotaCar("lexus" ,12);
+// console.log(lexus);
+// console.log(lexus.start());
+// lexus.setBrand("lexus");
 
-const userScorePara=document.querySelector("#user-score");
-const compScorePara=document.querySelector("#comp-score");
+//Inheritance and super Keyword 
 
-const gencompChoice=()=>{
-    const options=["rock","paper","scissors"];
-    const randindx=Math.floor(Math.random()*3);
-    return options[randindx];
-};
+// class person{
+//     constructor(name){
+//         this.species="homo sapiens";
+//         this.name=name;
+//     }
+//     eat(){
+//         console.log("eat");
+//     }
+//     sleep(){
+//         console.log("sleep");
+//     }
+//     work(){
+//         console.log("do nothing");
+//     }
+// }
+// class engineer extends person {
+//     constructor(name){
+//         super(name);//to invoke parent class constructor
+//     }
+    
+//     work(){
+//         super.eat();
+//         console.log("solve problems, build something");
+//     }
+// }
+// class doctor extends person {
+//     work(){
+//         console.log("treat patients");
+//     }
+// }
 
-const drawGame =()=>{
-    console.log("game was draw");
-    msg.innerText="Game was a draw. Play again";
-    msg.style.backgroundColor="#081b31";
-};
+// let engObj= new engineer("Romil");
+// console.log(engObj);
 
-const showWinner=(userWin,userChoice,compchoice)=>{
-    if(userWin){
-        userScore++;
-        userScorePara.innerText=userScore;
-        console.log("you win");
-        msg.innerText=`You Win! your ${userChoice} beat ${compchoice}`;
-        msg.style.backgroundColor="green";
-    }else{
-        compScore++;
-        compScorePara.innerText=compScore;
-        console.log("you lose");
-        msg.innerText=`You lose ${compchoice} beat your ${userChoice}`;
-        msg.style.backgroundColor="red";
-    }
-}
-
-const playGame=(userChoice)=>{
-    console.log("user choice =",userChoice);
-    const compchoice=gencompChoice();
-    console.log("comp choice =",compchoice);
-
-    if(userChoice === compchoice){
-        drawGame();
-    }else{
-        let userWin=true;
-        if(userChoice === "rock"){
-            //scissors,paper
-            userWin=compchoice === "paper"?false:true;
-        }else if(userChoice === "paper"){
-            //scissors,rock
-            userWin=compchoice === "scissors"?false:true;
-        }else{
-            //rock,paper
-            userWin=compchoice ==="rock"?false:true;
-        }
-        showWinner(userWin,userChoice,compchoice);
-    }
-};
-choices.forEach(choice => {
-    choice.addEventListener("click", () => {
-        const userChoice = choice.getAttribute("id");
-        // console.log("choice was clickd",userChoice);
-        playGame(userChoice);
-    });
-});
+// let docObj= new doctor();
+// console.log(docObj);
 
 
-// let inputvalue = document.querySelector("#one");
-// let daypara = document.querySelector("#two");
+/*Qs. You are creating a website for your college. Create a class User with 2 properties, name & email. It also has a method called viewData( ) that allows user to view website data. 
 
-// inputvalue.addEventListener("input", () => {
-//     daypara.value = inputvalue.value;
+Qs. Create a new class called Admin which inherits from User. Add a new method called editData to Admin that allows it to edit website data. */
+
+// let Data="some information";
+
+// class User{
+//     constructor(name,email){
+//         this.name=name;
+//         this.email=email;
+//     }
+//     viewData(){
+//         console.log("data =",Data);
+//     }
+// }
+//     class Admin extends User {
+//         constructor(name,email){
+//             super(name,email);
+//         }
+//         editData(){
+//             Data="some new data"
+//         }
+//     }
+
+// let obj=new User("Romil","ssanganiromil@gmail.com");
+// let admin=new Admin("admin","admin@gmial.com");
+// console.log(obj);
+// console.log(admin.viewData());
+
+//Error Handling 
+
+// let a=2;
+// let b=5;
+
+// console.log("a =",a);
+// console.log("b =",b);
+// console.log("a+b =",a+b);
+// console.log("a+b =",a+b);
+// try{
+//     console.log("a+b =",a+c);
+// }catch(err){
+//     console.log(err);
+// }
+// console.log("a+b =",a+b);
+// console.log("a+b =",a+b);
+// console.log("a+b =",a+b);
+// console.log("a+b =",a+b);
+
+//Asynchronous
+
+// console.log("one");
+// console.log("two");
+// setTimeout(()=>{
+//     console.log("hello");
+// }, 2000);
+// console.log("three");
+// console.log("four");
+
+//Callbacks
+
+// function sum(a,b){
+//     console.log(a+b);
+// }
+// function cal(a,b,sum){
+//     sum(a,b);
+//     // console.log(sum);
+// }
+// cal(5,4,sum);
+
+//
+
+// function hello(){
+//     console.log("hello");
+// };
+// setTimeout(hello,2000);
+
+//nesting
+// let age=19;
+// if(age >= 18){
+//     if(age>=60){
+//         console.log("senior");
+//     }else{
+//         console.log("middle");
+//     }
+// }else{
+//     console.log("child");
+// }
+
+//Callback Hell
+
+// function getData(dataId,getNextData){
+//     setTimeout(()=>{
+//         console.log("Data =",dataId)
+//         // getNextData();
+//         if(getNextData)
+//         {
+//             getNextData();
+//         }
+//     },2000); 
+// }
+// getData(1,()=>{
+//     console.log("getting data 2.....");
+//     getData(2,()=>{
+//     console.log("getting data 3.....");
+//         getData(3,()=>{
+//     console.log("getting data 4.....");
+//             getData(4);
+//         });
+//     });
 // });
 
-// let src=document.querySelector("#one");
-// let dst=document.querySelector("#two");
-//   window.onload=()=>{
-//       src.addEventListener("input",()=>{
-//         dst.value=src.value;
-//       });
-//   };
+//Promises
 
-const student ={
-  fullName:"Romil Sangani",
-  marks:94.4,
-  printmarks:()=>{
-    console.log("mark =",this.marks);
-  },
+// function getData(dataId,getNextData){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("Data =",dataId);
+//             resolve("success");
+//             // reject("error");
+//             // getNextData();
+//             if(getNextData)
+//             {
+//                 getNextData();
+//             }
+//         },10000); 
+//     });
+// };
+
+// function getPromise(){
+//         return new Promise((resolve,reject)=>{
+//             setTimeout(()=>{
+//                 console.log("hello");
+//             resolve("success");
+//             reject("error");
+//             },4000);
+//         });
+// }
+
+// function getPromise2(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("hello2");
+//         resolve("success");
+//         reject("error");
+//         },4000);
+//     });
+// };
+// console.log("fetching data1....");
+//     getPromise().then(()=>{
+//     // console.log("promise fulfilled1",res);
+//     console.log("fetching data2....");
+//     getPromise2().then(()=>{
+//         // console.log("promise fulfilled2",res);
+//     });
+// });
+
+
+function getData(dataId){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            console.log("data",dataId);
+        resolve("success");
+        reject("error");
+        },3000);
+    });
 };
+getData(1).then((res)=>{
+    return getData(2);
+}).then((res)=>{
+    return getData(3);  
+}).then((res)=>{
+    console.log(res);
+})
 
-const employee={
-  clltex(){
-    console.log("tex is 10%");
-  },
-}
-const karan={
-  salary:50000,
-}
-karan.__proto__=employee;
