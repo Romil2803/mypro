@@ -215,6 +215,8 @@ Qs. Create a new class called Admin which inherits from User. Add a new method c
 //     });
 // };
 
+//call back hall
+
 // function getPromise(){
 //         return new Promise((resolve,reject)=>{
 //             setTimeout(()=>{
@@ -243,21 +245,57 @@ Qs. Create a new class called Admin which inherits from User. Add a new method c
 //     });
 // });
 
+//promise chain
 
-function getData(dataId){
+// function getData(dataId){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data",dataId);
+//         resolve("success");
+//         reject("error");
+//         },3000);
+//     });
+// };
+// getData(1).then((res)=>{
+//     return getData(2);
+// }).then((res)=>{
+//     return getData(3);  
+// }).then((res)=>{
+//     console.log(res);
+// })
+
+function api(dataId){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            console.log("data",dataId);
-        resolve("success");
-        reject("error");
-        },3000);
+            console.log("weather data",dataId);
+            resolve(200);
+        },2000);
     });
 };
-getData(1).then((res)=>{
-    return getData(2);
-}).then((res)=>{
-    return getData(3);  
-}).then((res)=>{
-    console.log(res);
-})
 
+// async function getWeather() {   
+//     console.log("getting data 1.....");
+//     await api(1);
+//     console.log("getting data 2.....");
+//     await api(2);
+//     console.log("getting data 3.....");
+//     await api(3);
+//     console.log("getting data 4.....");
+//     await api(4);
+//     console.log("getting data 5.....");
+//     await api(5);
+// }
+// getWeather();
+
+(async function getWeather() {   
+    console.log("getting data 1.....");
+    await api(1);
+    console.log("getting data 2.....");
+    await api(2);
+    console.log("getting data 3.....");
+    await api(3);
+    console.log("getting data 4.....");
+    await api(4);
+    console.log("getting data 5.....");
+    await api(5);
+})();
