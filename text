@@ -1,0 +1,10 @@
+cloud_pct   = result.clouds.all
+feels_like  = result.main.feels_like
+humidity    = result.main.humidity
+max_temp    = result.main.temp_max
+min_temp    = result.main.temp_min
+sunrise = result.sys.sunrise
+sunset  = result.sys.sunset
+temp    = result.main.temp
+wind_degrees= result.wind.deg
+wind_speed  = result.wind.speed
