@@ -3,6 +3,7 @@ const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
 const fromCurr = document.querySelector(".from select");
 const toCurr = document.querySelector(".to select");
+const msg = document.querySelector(".msg");
 
 
 for(let select of dropdowns){
@@ -20,7 +21,7 @@ for(let select of dropdowns){
     }
     select.addEventListener("change",(evt)=>{
         updateFlag(evt.target);
-    })
+    });
 }
 const updateFlag = (element)=>{
     // console.log(element);
@@ -35,14 +36,20 @@ const updateFlag = (element)=>{
 btn.addEventListener("click", async (evt)=>{
     evt.preventDefault();
     let amount = document.querySelector(".amount input");
-    let amoVal=amount.value;
+    let amoVal = amount.value;
     if(amoVal === "" || amoVal < 1){
-        // amoVal = 1;
+        amoVal = 1;
         amount.value="1";
-    };
+    }
     // console.log(fromCurr.value,toCurr.value);
-    const URL=`${baseUrl}/${fromCurr.value}_${toCurr.value}.json`;
-    // baseUrl=URL;
+    const URL=`${baseUrl}/${encodeURIComponent(fromCurr.value)}_${encodeURIComponent(toCurr.value)}.json`;
     let response = await fetch(URL);
-    console.log(response);
+    // console.log(response);
+    let data = await response.json();
+    // console.log(data);
+    let rate = data["rate"]
+    console.log(rate);
+    let finalAmount = amoVal * rate;
+    console.log(finalAmount);
+    msg.innerText=`${amoVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`
 });
