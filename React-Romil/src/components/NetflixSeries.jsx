@@ -61,12 +61,13 @@
 // };
 import seriesData from "../api/seriesData.json";
 import {SeriesCard} from "../components/seriseCard";
+// import "../components/netflix.module.css"
 const NetflixSeries = () => {
   return (
     <>
-      <ul>
+      <ul className="flex">
         {seriesData.map((curEle) => (
-            <SeriesCard key={curEle.id} curEle={curEle} />
+            <SeriesCard key={curEle.id} data={curEle} />
         ))}
       </ul>
     </>
