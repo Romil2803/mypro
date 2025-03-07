@@ -33,14 +33,82 @@
 // }
 
 // export default App
+//react Fragment remove exra node
+// import React, { Fragment } from "react";
+// export const App = ()=>{
+//   // return([<NetflixSeries key="1" />,<NetflixSeries key="1" />]);//with arry and key
+// //   return (
+// //     <React.Fragment>
+// //     <div>
+// // <div>
+// //   <img src="Lucifer.jpeg" alt="" width="40%" height="40%" />
+// // </div>
+// // <h1>Lucifer</h1>
+// // <h3>Rating: 8.0</h3>
+// // <p>Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.</p>
+// // </div>
+// // <NetflixSeries />
+// // <NetflixSeries />
+// // <NetflixSeries />
+// // </React.Fragment>
+// //   );
+// };
 
-export const App = ()=>{
-  return <div>
-    <div>
-      <img src="Lucifer.jpeg" alt="" width="40%" height="40%" />
-    </div>
-    <h1>Lucifer</h1>
-    <h3>Rating: 8.0</h3>
-    <p>Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.</p>
-  </div>
-}
+//with out react
+
+// import { Fragment } from "react";
+// export const App = ()=>{
+//   return(
+//     <Fragment>
+//     <div>
+// <div>
+//   <img src="Lucifer.jpeg" alt="" width="40%" height="40%" />
+// </div>
+// <h1>Lucifer</h1>
+// <h3>Rating: 8.0</h3>
+// <p>Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.</p>
+// </div>
+// <NetflixSeries />
+// <NetflixSeries />
+// <NetflixSeries />
+// <NetflixSeries />
+// </Fragment>
+//   );
+// };
+
+//with out react and Fragment
+
+// export const App = () => {
+//   return (
+//     <>
+//       <div>
+//         <div>
+//           <img src="Lucifer.jpeg" alt="" width="40%" height="40%" />
+//         </div>
+//         <h1>Lucifer</h1>
+//         <h3>Rating: 8.0</h3>
+//         <p>
+//           Lucifer Morningstar has decided he's had enough of being the dutiful
+//           servant in Hell and decides to spend some time on Earth to better
+//           understand humanity. He settles in Los Angeles - the City of Angels.
+//         </p>
+//       </div>
+//       <NetflixSeries />
+//       <NetflixSeries />
+//       <NetflixSeries />
+//       <NetflixSeries />
+//     </>
+//   );
+// };
+
+//Dynamic Values in JSX:
+// import  NetflixSeries  from "../src/components/NetflixSeries";//default import
+import NetflixSeries from "../src/components/NetflixSeries";//named import
+export const App = () => {
+  return <NetflixSeries />;
+       
+    
+ 
+};
+
+

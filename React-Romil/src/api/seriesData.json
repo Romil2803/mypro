@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Lucifer",
+      "id": "Lucifer",
+      "img_url": "https://occ-0-8407-114.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABeFYtLG_NLWAlFT3z_IgAqvNy7j1-Y54dz8W-2vWI5pLl6ehREXrnsKhycRwArYvCwmOwFEwSoTDarrRXAmmSp01KEsNZCW3SR4J.jpg?r=f6c",
+      "rating": "8.0",
+      "description": "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+      "cast": ["Tom Ellis", "Lauren German", "Lesley-Ann Brandt"],
+      "genre": ["dark fantasy", "supernatural fantasy", "police procedural","Crime"],
+      "watch_url": "https://www.netflix.com/title/80057918"
+    },
+    {
+      "name": "Stranger Things",
+      "id": "stranger-things",
+      "img_url": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABY1lgHLARXhiipGC_8D2x1i4TPMy_k0n-TsE7GJBt96mIXfz4hCYkTmiJhBXH0v_xdr_0Z99muRipunQBBdVq3gjShE8I7LOTtav-2kHnAS6PGAGY9wd9hTC6eORizm85Y62SA.webp?r=c68",
+      "rating": "8.7",
+      "description": "In 1980s Indiana, a group of young friends witness supernatural forces and secret government exploits. As they search for answers, the children unravel a series of extraordinary mysteries.",
+      "cast": ["Millie Bobby Brown","Winona Ryder", "Joe Keery"],
+      "genre": ["Drama", "Fantasy", "Horror","monster horror"],
+      "watch_url": "https://www.netflix.com/title/80057281"
+    },
+    {
+      "name": "Wednesday",
+      "id": "Wednesday",
+      "img_url": "https://occ-0-8407-116.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABesFMn4Rd0vMEY6MocsRKGIU1fTadRKIlH9QseTPe_8GkqFAyzMCRtceQ1aDxS-eLuPEbkr1G7FqTxpZuHFCetr1xdvkWsfX-QgQ1nJkBN-3zW_z78DaeXrhVXVIZPBKNXFF1Q.webp?r=082",
+      "rating": "8.0",
+      "description": "Follows Wednesday Addams' years as a student, when she attempts to master her emerging psychic ability, thwart a killing spree, and solve the mystery that embroiled her parents.",
+      "cast": ["Jenna Ortega", "Emma Myers", "Hunter Doohan"],
+      "genre": ["Mystery", "Crime", "Fantasy","Horror"],
+      "watch_url": "https://www.netflix.com/title/81231974"
+    },
+    {
+      "name": "Money Heist",
+      "id": "money-heist",
+      "img_url": "https://www.unboundb2b.com/wp-content/uploads/2020/04/What-You-Learn-About-Marketing-From-Netflix-Series-Money-Heist-scaled.webp",
+      "rating": "8.2",
+      "description": "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
+      "cast": ["Úrsula Corberó", "Álvaro Morte", "Itziar Ituño","Pedro Alonso"],
+      "genre": ["Heist","Action", "Crime", "Drama"],
+      "watch_url": "https://www.netflix.com/title/80192098"
+    },
+    {
+      "name": "You",
+      "id": "You",
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPbEKVHuOUvturVocy83Iy1JWIC2O3wedd3A&s",
+      "rating": "7.7",
+      "description": "A dangerously charming, intensely obsessive young man goes to extreme measures to insert himself into the lives of those he is transfixed by.",
+      "cast": ["Penn Badgley", "Victoria Pedretti", "Elizabeth Lail"],
+      "genre": ["Dark Romance", "Crime", "psychological thriller","Romance"],
+      "watch_url": "https://www.netflix.com/title/80211991"
+    },
+    {
+      "name": "Peaky Blinders",
+      "id": "Peaky Blinders",
+      "img_url": "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaxRfyQp1AmI_-NvaELqaBKeuLR_0E-yQA7rQY8uQl8JOr2Lv3SFKoneg_V8QY1vHrGEqhj5PlsoK926lKvjUfjaXAqcfpqFP0QMtgSc2qpD1ZXiqjyl2wr6XeHKdPcfF3Ot_Q.jpg?r=c0e",
+      "rating": "8.7",
+      "description": "A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.",
+      "cast": ["Cillian Murphy", "Paul Anderson", "Sophie Rundle"],
+      "genre": ["Gangster", "Period Drama", "Crime"],
+      "watch_url": "https://www.netflix.com/title/80002479"
+    },
+    {
+      "name": "Queen of Tears",
+      "id": "queen-of-tears",
+      "img_url": "https://www.hindustantimes.com/ht-img/img/2024/05/01/1600x900/queen_of_tears_show_1714573336414_1714573367066.jpg",
+      "rating": "8.2",
+      "description": "A miraculous love story of a married couple overcoming a dizzying crisis.",
+      "cast": ["Kim Soo Hyun", "Kim Ji Won"],
+      "genre": ["Korean Drama", "Romance","Comedy","Drama"],
+      "watch_url": "https://www.netflix.com/title/81707950"
+    }
+  ]
