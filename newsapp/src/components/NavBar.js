@@ -1,17 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 // import PropTypes from 'prop-types'
 // import { Link } from "react-router";
 import logo from './Logo.png';
 
-export class NavBar extends Component {
-  static propTypes = {
-
-  }
-
-  render() {
+const NavBar = (props) => {
+  
+   
     return (
       <>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div className="container-fluid">
     {/* <a className="navbar-brand" href="/">Velocity News</a> */}
     <a className="navbar-brand" href="/"><img className='img-fluid' width={50} height={25} src={logo} alt="" /></a>
@@ -52,6 +49,5 @@ export class NavBar extends Component {
       </>
     )
   }
-}
 
 export default NavBar
